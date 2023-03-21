@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button[title]::before {
+  content: attr(title);
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@layer base {
+  body {
+    @apply bg-secondaryColor text-textColor font-primary;
+  }
+  .footer_headers {
+    @apply font-semibold text-xl mb-2;
+  }
+  .footer_list_link {
+    @apply md:basis-2/5 lg:basis-1/6 md:mb-2 lg:hover:border-b-[1px] border-textColor;
+  }
+  .auth_forms_links {
+    @apply text-sm font-bold border-b-[1px] border-accentColor;
+  }
+  .auth_form_error {
+    @apply text-sm mb-2 text-rose-500;
+  }
+
+  /* design site */
+  .style_section_icons_div {
+    @apply bg-primaryColor h-9  flex justify-center items-center text-secondaryColor py-2 px-4 border-r-[1px] cursor-pointer;
+  }
+  .style_section_icons {
+    @apply h-4 w-4 text-2xl;
+  }
+}

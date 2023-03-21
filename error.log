@@ -1,0 +1,53 @@
+{"level":"error","name":"ConflictError","statusCode":409}
+{"level":"error","name":"BadRequestError","statusCode":400}
+{"level":"error","name":"BadRequestError","statusCode":400}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error"}
+{"level":"error"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error"}
+{"level":"error","msg":"Unauthorized access","name":"UnauthorizedError","statusCode":401}
+{"level":"error","name":"Unauthorized Error","statusCode":"401"}
+{"level":"error","name":"Unauthorized Error","statusCode":"401"}
+{"level":"error","statusCode":"401"}
+{"level":"error","statusCode":"401"}
+{"level":"error","msg":"Unauthorized access","statusCode":"401"}
+{"level":"error","msg":"No Token","statusCode":"401"}
+{"level":"error","msg":"Unauthorized access","statusCode":"401"}
+{"level":"error","msg":"Unauthorized access","statusCode":"401"}
+{"level":"error","msg":"No Token","statusCode":"401"}
+{"level":"error","msg":"No Token","statusCode":"401"}
+{"level":"error","msg":"Unauthorized access","statusCode":"401"}
+{"level":"error","msg":"No Token","statusCode":"401"}
+{"level":"error","msg":"No Token","statusCode":"401"}
+{"level":"error"}
+{"level":"error","message":[{"location":"body","msg":"Username is already taken!","param":"username","value":"realId"}]}
+{"level":"error","message":[{"location":"body","msg":"Username is already taken!","param":"username","value":"realId"}]}
+{"level":"error","message":[{"location":"body","msg":"Username is already taken!","param":"username","value":"realId"}]}
+{"level":"error","message":[{"location":"body","msg":"Username is already taken!","param":"username","value":"realId"}]}
+{"level":"error","message":[{"location":"body","msg":"Username is already taken!","param":"username","value":"realId"}]}
