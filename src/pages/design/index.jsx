@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Draggable from 'react-draggable';
-import StyleManager from '../../components/designSite/StyleManager';
+import StyleManager from '../../components/designSite/styleManager/UniversalStyleManager';
 
-const DesignPage = () => {
+export default function DesignPage() {
   const [elementList, setElementList] = useState([]); // array to store the elements added to canvas
   const [activeElement, setActiveElement] = useState(null); // state to keep track of the currently active element
 
@@ -43,18 +43,18 @@ const DesignPage = () => {
       <div className="bg-gray-200 w-1/4 p-4">
         <h2 className="text-lg font-bold mb-4">Elements</h2>
         <div className="flex flex-wrap">
-          <div
+          <button
             className="bg-white border-gray-300 border rounded-lg p-2 m-1 cursor-move"
             onClick={() => handleAddElement('section')}
           >
             Section
-          </div>
-          <div
+          </button>
+          <button
             className="bg-white border-gray-300 border rounded-lg p-2 m-1 cursor-move"
             onClick={() => handleAddElement('pg')}
           >
             paragraph
-          </div>
+          </button>
           <button
             className="bg-white border-gray-300 border rounded-lg p-2 m-1 cursor-move"
             onClick={() => handleAddElement('Element 3')}
@@ -85,13 +85,13 @@ const DesignPage = () => {
                 onStop={() => setActiveElement(null)}
                 disabled={index !== activeElement}
               >
-                <div
+                <button
                   onClick={() => handleSelectElement(index)}
                   dangerouslySetInnerHTML={{
                     __html: singleElement.component,
                   }}
                   // style={singleElement.style}
-                ></div>
+                ></button>
               </Draggable>
             );
           } else {
@@ -105,6 +105,4 @@ const DesignPage = () => {
       <StyleManager />
     </div>
   );
-};
-
-export default DesignPage;
+}

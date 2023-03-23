@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import FormField from './FormField';
 
-const AuthForm = ({ formType }) => {
+export default function AuthForm({ formType }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     username: '',
@@ -186,6 +186,4 @@ const AuthForm = ({ formType }) => {
       </div>
     </>
   );
-};
-
-export default AuthForm;
+}

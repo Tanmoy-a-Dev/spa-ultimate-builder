@@ -1,6 +1,6 @@
 import AuthForm from '../../components/basics/forms/AuthForm';
 
-const SignIn = () => {
+export default function SignIn() {
   return (
     <div>
       <h1 className="text-xl pl-4 mt-4 text-center lg:text-left font-bold">
@@ -9,6 +9,4 @@ const SignIn = () => {
       <AuthForm formType="signIn" />
     </div>
   );
-};
-
-export default SignIn;
+}

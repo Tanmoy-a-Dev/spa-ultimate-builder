@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-const VerifyEmail = () => {
+export default function VerifyEmail() {
   const router = useRouter();
   const { userId } = router.query;
 
@@ -52,6 +52,4 @@ const VerifyEmail = () => {
       </div>
     </div>
   );
-};
-
-export default VerifyEmail;
+}

@@ -1,11 +1,11 @@
-const Protected = ({ data }) => {
+export default function Protected({ data }) {
   return (
     <div>
       <p>Hello this has some protected data</p>
       {console.log(data)}
     </div>
   );
-};
+}
 
 export async function getServerSideProps() {
   const res = await fetch('http://localhost:5000/api/protected');
@@ -14,5 +14,3 @@ export async function getServerSideProps() {
 
   return { props: { data } };
 }
-
-export default Protected;

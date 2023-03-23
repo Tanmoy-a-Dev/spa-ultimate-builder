@@ -3,8 +3,12 @@ import { useState } from 'react';
 import { GiLargePaintBrush } from 'react-icons/gi';
 import { IoSettings } from 'react-icons/io5';
 import { MdStyle, MdElectricBolt } from 'react-icons/md';
+import ElemSettingsTabComponent from '../tabElements/ElemSettingsTabComponent';
+import InteractionsTabComponent from '../tabElements/InteractionsTabComponent';
+import StyleManagerTabComponent from '../tabElements/StyleManagerTabComponent';
+import StyleTabComponent from '../tabElements/StyleTabComponent';
 
-export default function StyleManager() {
+export default function UniversalStyleManager({ activeElement }) {
   const [activeTab, setActiveTab] = useState('style');
   const handleTabClick = (e) => {
     // console.log(e.currentTarget.id);
@@ -76,7 +80,6 @@ export default function StyleManager() {
         </button>
       </div>
       {/* tab elements */}
-      <div className="border-2 border-accentColor h-[calc(100vh-36px)]"></div>
     </div>
   );
 }

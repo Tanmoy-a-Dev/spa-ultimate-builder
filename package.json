@@ -8,7 +8,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "build": "next build",
+    "start": "node server/server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

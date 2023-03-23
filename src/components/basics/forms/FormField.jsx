@@ -1,4 +1,4 @@
-const FormField = ({
+export default function FormField({
   name,
   label,
   type,
@@ -6,7 +6,7 @@ const FormField = ({
   value,
   onChange,
   error,
-}) => {
+}) {
   return (
     <div className="mb-4">
       <label className="block text-textColor font-bold mb-2" htmlFor={name}>
@@ -29,6 +29,4 @@ const FormField = ({
       />
     </div>
   );
-};
-
-export default FormField;
+}

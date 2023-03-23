@@ -3,8 +3,9 @@ import '../../styles/globals.css';
 import BackPanelLayout from '../components/layouts/BackPanelLayout';
 import DesignPageLayout from '../components/layouts/designPageLayout';
 import WebsitelLayout from '../components/layouts/WebsiteLayout';
+import PageLoadingIndicator from '../helpers/PageLoadingIndicator';
 
-function MyApp({
+export default function MyApp({
   Component,
   pageProps,
   router,
@@ -30,6 +31,7 @@ function MyApp({
 
   return (
     <>
+      <PageLoadingIndicator />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -72,5 +74,3 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
     ogUrl,
   };
 };
-
-export default MyApp;
