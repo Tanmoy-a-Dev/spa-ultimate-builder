@@ -1,31 +1,12 @@
 import React, { useState } from 'react';
+import { renderToString } from 'react-dom/server';
 import Draggable from 'react-draggable';
 import StyleManager from '../../components/designSite/styleManager/UniversalStyleManager';
+import { allElements } from '../../helpers/constants';
 
 export default function DesignPage() {
   const [elementList, setElementList] = useState([]); // array to store the elements added to canvas
   const [activeElement, setActiveElement] = useState(null); // state to keep track of the currently active element
-
-  const allElements = [
-    {
-      id: 'section',
-      component: '<section className="handle">Hello</section>',
-      style: {
-        border: '2px solid #6B7280',
-        minWidth: '100px',
-        minHeight: '100px',
-      },
-    },
-    {
-      id: 'pg',
-      component: '<p className="handle">Hello</p>',
-      style: {
-        border: '2px solid #6B7280',
-        minWidth: '50px',
-        minHeight: '50px',
-      },
-    },
-  ];
 
   // function to handle adding elements to canvas
   const handleAddElement = (element) => {
@@ -71,7 +52,7 @@ export default function DesignPage() {
       <div className="bg-white border-gray-300 border w-full relative h-full">
         {elementList.map((element, index) => {
           const singleElement = allElements.find((el) => el.id == element);
-          console.log({ singleElement });
+          console.log({ component: singleElement });
           if (singleElement) {
             return (
               <Draggable
@@ -79,19 +60,20 @@ export default function DesignPage() {
                 handle=".handle"
                 defaultPosition={{ x: 0, y: 0 }}
                 position={null}
-                // grid={[25, 25]}
+                grid={[25, 25]}
                 bounds="parent"
                 onStart={() => handleSelectElement(index)}
                 onStop={() => setActiveElement(null)}
                 disabled={index !== activeElement}
               >
-                <button
+                <div
                   onClick={() => handleSelectElement(index)}
                   dangerouslySetInnerHTML={{
-                    __html: singleElement.component,
+                    __html: renderToString(singleElement.component),
                   }}
                   // style={singleElement.style}
-                ></button>
+                  className="w-full"
+                ></div>
               </Draggable>
             );
           } else {

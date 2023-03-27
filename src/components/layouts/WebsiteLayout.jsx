@@ -16,6 +16,8 @@ export default function WebsitelLayout({ children }) {
     }
   }, [children]);
 
+  console.log(children);
+
   return (
     <>
       <Header authPage={isAuthPage} />
